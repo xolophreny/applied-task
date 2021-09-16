@@ -6,6 +6,7 @@
 //#include <unicode/uchar.h>
 //#include <unicode/ustdio.h>
 //#include <unicode/ustring.h>
+#include <clocale>
 using namespace std;
 
 int n;
@@ -52,6 +53,7 @@ string nameForNumber(int num) {
 }
 
 int main() {
+	setlocale(LC_ALL, "ru_RU");
 	do {
 		printf("Введите целое число (отрицательное для выхода): ");
 		scanf("%d", &n);
